@@ -1,0 +1,133 @@
+/* CSS for navigation */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+    position: absolute;
+    /* left: 40%; */
+    top: 0;
+}
+.home{
+    width: 80%;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: #00A6FB;
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Home page */
+.proPicDiv {
+    /* padding-top: 500px; */
+    position: relative;
+    width: 14%;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.line {
+    background-color: #ffffff1c;
+    border: 2px solid #ffffff1c;
+    width: 80%;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    animation: tilt 1s ease forwards;
+}
+@keyframes tilt {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.proPic {
+    top: 20px;
+    border: none;
+    border-radius: 50%;
+    width: 80%;
+    animation: openEyes 1s ease forwards;
+
+}
+
+@keyframes openEyes {
+    0% {
+
+        opacity: 0;
+        margin-top: 180px;
+        transform: rotate(90deg);
+
+    }
+
+    30% {
+        margin-top: -15px;
+    }
+
+    50% {
+        margin-top: 10px;
+
+    }
+
+    65% {
+        margin-top: -5px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 0px;
+        transform: rotate(0deg);
+    }
+
+}
+.intro{
+}
+
+.name{
+    margin: 0;
+    font-size: 45px;
+    font-weight: 700;
+
+}
+.designation{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
