@@ -8,6 +8,11 @@ body {
     color: rgba(181, 181, 181, 0.857);
 
 }
+body::-webkit-scrollbar {
+    width: 0;
+    scroll-behavior: smooth;
+    height: 0;
+}
 .about{
     width: auto;
     padding: 0 10%;
@@ -59,3 +64,26 @@ body {
     /* color: aliceblue; */
 }
 
+@media only screen and (max-width: 600px) {
+    .about{
+        padding-top: 10%;
+    }
+    .nav{
+        width: 100vw;
+        position: fixed;
+        left: 0;
+        background-color: #1928199c;
+        top: 0;
+        height: 13%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .navList{
+        height: auto;
+        flex-direction: row;
+        width: 60%;
+    }
+
+
+}

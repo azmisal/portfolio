@@ -3,22 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - Contact</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <!-- <ul>
+    <div class="contact">
+        <div class="nav">
+            <ul class="navList">
                 <li><a href="index.html"><div class="navIcon"><img src="Assets/home.png" alt=""></div></a></li>
                 <li><a href="about.html"><div class="navIcon"><img src="Assets/profile.png" alt=""></div></a></li>
                 <li><a href="contact.html"><div class="navIcon"><img src="Assets/contact.png" alt=""></div></a></li>
-            </ul> -->
-        </nav>
-    </header>
+              </ul>
+        </div>
+        
+            
+            <form id="contactForm">
+                <h1>Contact Me</h1>
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+                <div class="icons">
+                    <a href="https://www.instagram.com/azmi_sal__m/" class="iconLink"><img src="Assets/insta.png" alt="" class="icon"></a>
+                    <a href="https://www.instagram.com/azmi_sal__m/" class="iconLink"><img src="Assets/gmail.png" alt="" class="icon"></a>
+                    <a href="https://www.instagram.com/azmi_sal__m/" class="iconLink"><img src="Assets/link.png" alt="" class="linkedin"></a>
 
-    <h1>Contact Me</h1>
-    <p>This is the contact page.</p>
+                </div>
+            </form>
+            
+    
+</div>
 
     <script src="script.js"></script>
 </body>

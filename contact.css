@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+body {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Roboto Mono', monospace;
+
+    margin: 0;
+}
+
+.contact {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#contactForm {
+    height: auto;
+    width: 30%;
+    display: flex;
+    /* background: red; */
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #218502;
+    border-radius: 35px;
+    
+}
+
+.nav {
+    position: absolute;
+    right: 3%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.navList {
+    list-style-type: none;
+    padding: 0;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    justify-content: space-between;
+
+}
+
+.navIcon {
+    background-color: #1c6000;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .1s ease-in-out;
+
+
+}
+
+.navIcon:hover {
+    background-color: #218502;
+    transform: scale(110%);
+    transition: .1s ease-in-out;
+    box-shadow: #1c6000 0px 3px 15px;
+
+}
+
+.navIcon img {
+    width: 25px;
+    opacity: .75;
+}
+
+.icons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.iconLink {
+    padding: 4px;
+    background-color: #444643;
+    display: flex;
+    border-radius: 17px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+}
+
+.iconLink:hover,button:hover{
+    background-color: #218502;
+    transform: scale(110%);
+    transition: .1s ease-in-out;
+    box-shadow: #1c6000 0px 3px 15px;
+}
+.linkedin{
+    width: 20px;
+    margin: 3px;
+}
+
+input{
+    height: 34px;
+    width: 77%;
+    padding-left: 3%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+}
+textarea{
+    width: 77%;
+    padding-left: 3%;
+    height: 100px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+
+}
+button{
+    width: 30%;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #1c6000;
+    cursor: pointer;
+    transition: .1s ease-in-out;
+
+}
+
+@media only screen and (max-width: 600px) {
+    h1{
+        font-size: 25px;
+    }
+    #contactForm{
+        width: 80%;
+        margin-top: 10%;
+    }
+    .nav{
+        width: 100vw;
+        position: fixed;
+        left: 0;
+        background-color: #1928199c;
+        top: 0;
+        height: 13%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .navList{
+        height: auto;
+        flex-direction: row;
+        width: 60%;
+    }
+}
