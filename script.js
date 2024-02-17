@@ -25,4 +25,4 @@ document.getElementById("contactForm").addEventListener("submit", function(event
             alert('Message sending failed.');
         });
 });
-);
+
