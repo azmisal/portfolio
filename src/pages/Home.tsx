@@ -1,28 +1,22 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { ArrowRight, Download, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { PROJECTS, SKILL_GROUPS, CONTACT } from "@/lib/profile";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeading } from "@/components/SectionHeading";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Azmi Saleem — Backend-focused Full-Stack Engineer" },
-      { name: "description", content: "Backend-focused full-stack engineer building enterprise healthcare systems at TCS. Node.js, Java, React, Python." },
-      { property: "og:title", content: "Azmi Saleem — Backend-focused Full-Stack Engineer" },
-      { property: "og:description", content: "Backend-focused full-stack engineer. Enterprise healthcare at TCS for Johnson & Johnson and Stryker." },
-      { property: "og:url", content: "/" },
-    ],
-    links: [{ rel: "canonical", href: "/" }],
-  }),
-  component: HomePage,
-});
-
 const featured = PROJECTS.slice(0, 3);
 
-function HomePage() {
+export default function HomePage() {
   return (
     <>
+      <Helmet>
+        <title>Azmi Saleem — Backend-focused Full-Stack Engineer</title>
+        <meta name="description" content="Backend-focused full-stack engineer building enterprise healthcare systems at TCS. Node.js, Java, React, Python." />
+        <meta property="og:title" content="Azmi Saleem — Backend-focused Full-Stack Engineer" />
+        <meta property="og:description" content="Backend-focused full-stack engineer. Enterprise healthcare at TCS for Johnson & Johnson and Stryker." />
+        <link rel="canonical" href="/" />
+      </Helmet>
       {/* Hero */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
