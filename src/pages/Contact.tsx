@@ -1,23 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Helmet } from "react-helmet-async";
 import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { CONTACT } from "@/lib/profile";
 import { SectionHeading } from "@/components/SectionHeading";
 
-export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact — Azmi Saleem" },
-      { name: "description", content: "Get in touch with Azmi Saleem — email, phone, GitHub, and LinkedIn." },
-      { property: "og:title", content: "Contact — Azmi Saleem" },
-      { property: "og:description", content: "Open to full-time roles and selective contract work." },
-      { property: "og:url", content: "/contact" },
-    ],
-    links: [{ rel: "canonical", href: "/contact" }],
-  }),
-  component: ContactPage,
-});
-
-function ContactPage() {
+export default function ContactPage() {
   const items = [
     { icon: Mail, label: "Email", value: CONTACT.email, href: `mailto:${CONTACT.email}` },
     { icon: Phone, label: "Phone", value: CONTACT.phone, href: `tel:${CONTACT.phone.replace(/\s/g, "")}` },

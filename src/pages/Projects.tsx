@@ -1,32 +1,25 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import { PROJECTS } from "@/lib/profile";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeading } from "@/components/SectionHeading";
 
-export const Route = createFileRoute("/projects")({
-  head: () => ({
-    meta: [
-      { title: "Projects — Azmi Saleem" },
-      { name: "description", content: "Selected projects by Azmi Saleem: trading simulators, AI tools, encrypted vaults, blockchain IP and more." },
-      { property: "og:title", content: "Projects — Azmi Saleem" },
-      { property: "og:description", content: "A selection of full-stack and backend projects." },
-      { property: "og:url", content: "/projects" },
-    ],
-    links: [{ rel: "canonical", href: "/projects" }],
-  }),
-  component: ProjectsPage,
-});
-
 const CATEGORIES = ["All", "Backend", "Full-Stack", "Frontend"] as const;
 type Cat = (typeof CATEGORIES)[number];
 
-function ProjectsPage() {
+export default function ProjectsPage() {
   const [active, setActive] = useState<Cat>("All");
   const visible = active === "All" ? PROJECTS : PROJECTS.filter((p) => p.category === active);
 
   return (
     <section>
+      <Helmet>
+        <title>Projects — Azmi Saleem</title>
+        <meta name="description" content="Selected projects by Azmi Saleem: trading simulators, AI tools, encrypted vaults, blockchain IP and more." />
+        <meta property="og:title" content="Projects — Azmi Saleem" />
+        <meta property="og:description" content="A selection of full-stack and backend projects." />
+        <link rel="canonical" href="/projects" />
+      </Helmet>
       <div className="mx-auto max-w-6xl px-6 py-20">
         <SectionHeading
           eyebrow="Projects"

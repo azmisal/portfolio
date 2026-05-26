@@ -1,24 +1,17 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Helmet } from "react-helmet-async";
 import { SectionHeading } from "@/components/SectionHeading";
 import { EXPERIENCE, SKILL_GROUPS, EDUCATION, ACHIEVEMENTS } from "@/lib/profile";
 
-export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About — Azmi Saleem" },
-      { name: "description", content: "About Azmi Saleem: experience at TCS, MetaShot, and Mezmo Solutions, plus skills and education." },
-      { property: "og:title", content: "About — Azmi Saleem" },
-      { property: "og:description", content: "Backend-focused full-stack engineer with 2+ years building enterprise healthcare systems." },
-      { property: "og:url", content: "/about" },
-    ],
-    links: [{ rel: "canonical", href: "/about" }],
-  }),
-  component: AboutPage,
-});
-
-function AboutPage() {
+export default function AboutPage() {
   return (
     <>
+      <Helmet>
+        <title>About — Azmi Saleem</title>
+        <meta name="description" content="About Azmi Saleem: experience at TCS, MetaShot, and Mezmo Solutions, plus skills and education." />
+        <meta property="og:title" content="About — Azmi Saleem" />
+        <meta property="og:description" content="Backend-focused full-stack engineer with 2+ years building enterprise healthcare systems." />
+        <link rel="canonical" href="/about" />
+      </Helmet>
       <section className="border-b border-border">
         <div className="mx-auto max-w-4xl px-6 py-20">
           <p className="mb-3 text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
