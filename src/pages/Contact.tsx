@@ -14,6 +14,13 @@ export default function ContactPage() {
 
   return (
     <section>
+      <Helmet>
+        <title>Contact — Azmi Saleem</title>
+        <meta name="description" content="Get in touch with Azmi Saleem — email, phone, GitHub, and LinkedIn." />
+        <meta property="og:title" content="Contact — Azmi Saleem" />
+        <meta property="og:description" content="Open to full-time roles and selective contract work." />
+        <link rel="canonical" href="/contact" />
+      </Helmet>
       <div className="mx-auto max-w-3xl px-6 py-20">
         <SectionHeading
           eyebrow="Contact"
