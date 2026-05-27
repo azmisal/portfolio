@@ -4,7 +4,7 @@ import { PROJECTS } from "@/lib/profile";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeading } from "@/components/SectionHeading";
 
-const CATEGORIES = ["All", "Backend", "Full-Stack", "Frontend"] as const;
+const CATEGORIES = ["All", "Full-Stack", "Frontend"] as const;
 type Cat = (typeof CATEGORIES)[number];
 
 export default function ProjectsPage() {

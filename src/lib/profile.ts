@@ -13,7 +13,7 @@ export type Project = {
   blurb: string;
   description: string;
   stack: string[];
-  category: "Backend" | "Full-Stack" | "Frontend";
+  category: "Full-Stack" | "Frontend" | "Backend";
   links?: { live?: string; github?: string };
 };
 
@@ -46,7 +46,7 @@ export const PROJECTS: Project[] = [
     description:
       "Client-side encrypted storage where keys never leave the device. Server stores only ciphertext — even a full DB breach reveals nothing.",
     stack: ["React", "Node.js", "WebCrypto", "MongoDB"],
-    category: "Backend",
+    category: "Full-Stack",
   },
   {
     slug: "Edges+",
@@ -56,7 +56,7 @@ export const PROJECTS: Project[] = [
     description:
       "A Face web site for introducing products and services of a startup Edges+. It is built using React and Tailwind CSS, providing a responsive and visually appealing user interface to showcase the company's offerings.",
     stack: ["React", "Tailwind CSS", "Vite", "TypeScript", "MaterialUI"],
-    category: "Backend",
+    category: "Frontend",
   },
   {
     slug: "ipfy",
@@ -66,7 +66,7 @@ export const PROJECTS: Project[] = [
     description:
       "Register hashes of creative work on a blockchain for immutable proof of authorship and timestamp, with a clean verification flow for third parties.",
     stack: ["React Js", "Ethers.js"],
-    category: "Full-Stack",
+    category: "Frontend",
   },
   {
     slug: "tutorsApp",
