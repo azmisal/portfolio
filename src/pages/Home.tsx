@@ -47,6 +47,7 @@ export default function HomePage() {
               href="https://drive.google.com/file/d/1DWKiqIGOWJmGJRcTKvqHl_9EgIwITSbu/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
+              download
               className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
             >
               <Download className="h-4 w-4" /> Download résumé

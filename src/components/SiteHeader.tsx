@@ -34,6 +34,7 @@ export function SiteHeader() {
           href="https://drive.google.com/file/d/1DWKiqIGOWJmGJRcTKvqHl_9EgIwITSbu/view?usp=sharing"
           target="_blank"
           rel="noreferrer"
+          download
           className="inline-flex items-center gap-2 rounded-md bg-primary px-3.5 py-2 text-xs font-medium text-primary-foreground transition-opacity hover:opacity-90"
         >
           <Download className="h-3.5 w-3.5" />
