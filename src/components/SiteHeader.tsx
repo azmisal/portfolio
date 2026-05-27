@@ -1,6 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
 import { Download } from "lucide-react";
-import Resume from "@/Assets/azmi-saleem-resume.pdf";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -23,8 +22,7 @@ export function SiteHeader() {
               to={n.to}
               end={n.to === "/"}
               className={({ isActive }) =>
-                `text-sm transition-colors hover:text-foreground ${
-                  isActive ? "text-foreground font-medium" : "text-muted-foreground"
+                `text-sm transition-colors hover:text-foreground ${isActive ? "text-foreground font-medium" : "text-muted-foreground"
                 }`
               }
             >
@@ -33,8 +31,9 @@ export function SiteHeader() {
           ))}
         </nav>
         <a
-          href={Resume}
-          download
+          href="https://drive.google.com/file/d/1DWKiqIGOWJmGJRcTKvqHl_9EgIwITSbu/view?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
           className="inline-flex items-center gap-2 rounded-md bg-primary px-3.5 py-2 text-xs font-medium text-primary-foreground transition-opacity hover:opacity-90"
         >
           <Download className="h-3.5 w-3.5" />
