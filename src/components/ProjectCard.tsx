@@ -2,9 +2,16 @@ import { ArrowUpRight, Github } from "lucide-react";
 import type { Project } from "@/lib/profile";
 
 export function ProjectCard({ project }: { project: Project }) {
+
+const handleonClick = () => {
+  if (project.link) {
+    window.open(project.link, "_blank");
+  }
+}
+
   return (
-    <article className="group flex h-full flex-col rounded-lg border border-border bg-card p-6 transition-all hover:border-foreground/30 hover:shadow-sm">
-      <div className="mb-4 flex items-start justify-between">
+    <article className="group flex h-full flex-col rounded-lg border border-border bg-card p-6 transition-all hover:border-foreground/30 hover:shadow-sm" onClick={handleonClick}>
+      <div className="mb-4 flex items-start justify-between" >
         <div>
           <p className="mb-1 text-xs uppercase tracking-wider text-muted-foreground">
             {project.category}

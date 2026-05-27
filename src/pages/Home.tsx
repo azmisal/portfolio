@@ -4,7 +4,7 @@ import { ArrowRight, Download, Github, Linkedin, Mail, MapPin } from "lucide-rea
 import { PROJECTS, SKILL_GROUPS, CONTACT } from "@/lib/profile";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeading } from "@/components/SectionHeading";
-
+import Resume from "@/Assets/azmi-saleem-resume.pdf";
 const featured = PROJECTS.slice(0, 3);
 
 export default function HomePage() {
@@ -44,7 +44,7 @@ export default function HomePage() {
               View projects <ArrowRight className="h-4 w-4" />
             </Link>
             <a
-              href="/azmi-saleem-resume.pdf"
+              href={Resume}
               download
               className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
             >

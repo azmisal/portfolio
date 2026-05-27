@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { Download } from "lucide-react";
+import Resume from "@/Assets/azmi-saleem-resume.pdf";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -32,7 +33,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <a
-          href="/azmi-saleem-resume.pdf"
+          href={Resume}
           download
           className="inline-flex items-center gap-2 rounded-md bg-primary px-3.5 py-2 text-xs font-medium text-primary-foreground transition-opacity hover:opacity-90"
         >

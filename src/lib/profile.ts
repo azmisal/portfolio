@@ -9,6 +9,7 @@ export const CONTACT = {
 export type Project = {
   slug: string;
   name: string;
+  link?: string;
   blurb: string;
   description: string;
   stack: string[];
@@ -20,6 +21,7 @@ export const PROJECTS: Project[] = [
   {
     slug: "cryptmaster",
     name: "CryptMaster",
+    link: "https://cryptmaster-web.vercel.app/",
     blurb: "Real-time crypto trading simulator with portfolio tracking and live market data.",
     description:
       "A simulated trading environment integrating live market feeds from CoinGecko, with watchlists, portfolio P&L, and historical charting. Designed for learners to practice strategy without financial risk.",
@@ -27,17 +29,19 @@ export const PROJECTS: Project[] = [
     category: "Full-Stack",
   },
   {
-    slug: "focuspilot",
-    name: "FocusPilot",
-    blurb: "AI task manager that auto-generates subtasks and tracks productivity.",
+    slug: "Jobber",
+    name: "Jobber",
+    link: "https://jobber-frontend-two.vercel.app/login",
+    blurb: "AI Resume Optimization Agent According to Job Descriptions.",
     description:
-      "Productivity tool that uses an LLM to decompose high-level goals into actionable subtasks, with intelligent prioritization and focus-session analytics.",
-    stack: ["React", "FastAPI", "Python", "MongoDB", "OpenAI"],
+      "AI-powered resume optimization agent that analyzes resumes against job descriptions, identifies missing ATS keywords,proposes tailored improvements, and generates ATS- friendly resumes after user approval of changes.",
+    stack: ["React", "FastAPI", "Python", "MongoDB", "OpenAI", "Tailwind CSS", "Vite", "OpenRouter", "Huggingface", "groq"],
     category: "Full-Stack",
   },
   {
     slug: "saviour",
     name: "Saviour",
+    link: "https://saviour-hazel.vercel.app/",
     blurb: "Zero-knowledge encrypted vault for files and passwords.",
     description:
       "Client-side encrypted storage where keys never leave the device. Server stores only ciphertext — even a full DB breach reveals nothing.",
@@ -45,32 +49,34 @@ export const PROJECTS: Project[] = [
     category: "Backend",
   },
   {
-    slug: "runner",
-    name: "Runner",
-    blurb: "Online coding platform with sandboxed multi-language execution.",
+    slug: "Edges+",
+    name: "Edges+",
+    link: "https://edgesplus.com/",
+    blurb: "Frontend Application for Startup Edges+ as face web dashboard",
     description:
-      "Browser-based IDE that executes user code in isolated Docker containers with resource limits, supporting multiple languages and real-time output streaming.",
-    stack: ["React", "Node.js", "Docker", "WebSockets"],
+      "A Face web site for introducing products and services of a startup Edges+. It is built using React and Tailwind CSS, providing a responsive and visually appealing user interface to showcase the company's offerings.",
+    stack: ["React", "Tailwind CSS", "Vite", "TypeScript", "MaterialUI"],
     category: "Backend",
   },
   {
     slug: "ipfy",
     name: "IPfy",
+    link: "https://clg-24.vercel.app/",
     blurb: "Decentralized intellectual property registration on-chain.",
     description:
       "Register hashes of creative work on a blockchain for immutable proof of authorship and timestamp, with a clean verification flow for third parties.",
-    stack: ["Solidity", "React", "Node.js", "Ethers.js"],
+    stack: ["React Js", "Ethers.js"],
     category: "Full-Stack",
   },
   {
-    slug: "offcet",
-    name: "Offcet / Edges+",
-    blurb: "Carbon offsetting dashboards built for MetaShot clients.",
+    slug: "tutorsApp",
+    name: "Tutors App",
+    blurb: "Global tutoring marketplace connecting students and teachers through flexible bidding.",
     description:
-      "Client-facing dashboards visualizing environmental impact metrics, contribution history, and offset certificates with responsive, accessible UI.",
+      "Collaborative ed-tech platform enabling students to connect with teachers worldwide through a bid-based system. Built to make quality education accessible and affordable by allowing teachers to accept sessions at flexible or zero cost after direct chat discussions. Contributed as a frontend developer, building responsive and user-friendly interfaces.",
     stack: ["React", "Next.js", "Tailwind CSS"],
     category: "Frontend",
-  },
+  }
 ];
 
 export const EXPERIENCE = [
@@ -106,19 +112,49 @@ export const EXPERIENCE = [
     ],
   },
 ];
-
 export const SKILL_GROUPS = [
   {
-    title: "Backend & Infrastructure",
-    skills: ["Node.js", "Express", "Java", "Python", "FastAPI", "REST APIs", "MongoDB", "PostgreSQL", "MySQL", "Docker"],
+    title: "Development",
+    skills: [
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "FastAPI",
+      "Java",
+      "Python",
+      "REST APIs",
+      "MongoDB",
+      "PostgreSQL",
+      "MySQL",
+      "Figma",
+    ],
   },
   {
-    title: "Frontend",
-    skills: ["React", "Next.js", "TypeScript", "HTML5", "CSS3", "Tailwind CSS", "Three.js / R3F"],
+    title: "DevOps & Service Tools",
+    skills: [
+      "Docker",
+      "Kubernetes",
+      "Git",
+      "GitHub",
+      "CI/CD",
+      "ServiceNow",
+      "Jira",
+    ],
   },
   {
-    title: "Engineering Practice",
-    skills: ["System Design", "Performance Optimization", "Debugging Legacy Code", "Production Support", "Git", "CI/CD", "Cross-functional Collaboration"],
+    title: "Engineering Practices",
+    skills: [
+      "System Design",
+      "Performance Optimization",
+      "Debugging Legacy Code",
+      "Production Support",
+      "Cross-functional Collaboration",
+    ],
   },
 ];
 
