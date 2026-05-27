@@ -5,11 +5,12 @@ let lenis: Lenis | null = null;
 export function initLenis() {
     if (lenis) return lenis;
 
+
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const L = Lenis as any;
 
     lenis = new L({
-        duration: 1.2,
+        duration: 1.1,
         smoothWheel: true,
         smoothTouch: false,
         lerp: 0.1,
