@@ -2,8 +2,8 @@ export const CONTACT = {
   email: "azmisaleem96@gmail.com",
   phone: "+91 9072760818",
   location: "Thrissur, Kerala, India",
-  github: "https://github.com/azmisaleem",
-  linkedin: "https://www.linkedin.com/in/azmi-saleem",
+  github: "https://github.com/azmisal",
+  linkedin: "https://www.linkedin.com/in/azmisal/",
 };
 
 export type Project = {
