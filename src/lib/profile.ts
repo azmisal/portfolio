@@ -21,7 +21,7 @@ export const PROJECTS: Project[] = [
   {
     slug: "cryptmaster",
     name: "CryptMaster",
-    link: "https://cryptmaster-web.vercel.app/",
+    link: "https://cryptmaster.azmisal.in/",
     blurb: "Real-time crypto trading simulator with portfolio tracking and live market data.",
     description:
       "A simulated trading environment integrating live market feeds from CoinGecko, with watchlists, portfolio P&L, and historical charting. Designed for learners to practice strategy without financial risk.",
@@ -31,7 +31,7 @@ export const PROJECTS: Project[] = [
   {
     slug: "Jobber",
     name: "Jobber",
-    link: "https://jobber-frontend-two.vercel.app/login",
+    link: "https://jobber.azmisal.in",
     blurb: "AI Resume Optimization Agent According to Job Descriptions.",
     description:
       "AI-powered resume optimization agent that analyzes resumes against job descriptions, identifies missing ATS keywords,proposes tailored improvements, and generates ATS- friendly resumes after user approval of changes.",
@@ -41,7 +41,7 @@ export const PROJECTS: Project[] = [
   {
     slug: "saviour",
     name: "Saviour",
-    link: "https://saviour-hazel.vercel.app/",
+    link: "https://saviour.azmisal.in/",
     blurb: "Zero-knowledge encrypted vault for files and passwords.",
     description:
       "Client-side encrypted storage where keys never leave the device. Server stores only ciphertext — even a full DB breach reveals nothing.",
