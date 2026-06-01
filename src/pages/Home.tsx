@@ -4,10 +4,16 @@ import { ArrowRight, Download, Github, Linkedin, Mail, MapPin } from "lucide-rea
 import { PROJECTS, SKILL_GROUPS, CONTACT } from "@/lib/profile";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeading } from "@/components/SectionHeading";
+import { resumeDownload } from "@/utils";
 
 const featured = PROJECTS.slice(0, 3);
 
 export default function HomePage() {
+
+  const handleDownload = () => {
+    resumeDownload();
+  }
+
   return (
     <>
       <Helmet>
@@ -43,15 +49,12 @@ export default function HomePage() {
             >
               View projects <ArrowRight className="h-4 w-4" />
             </Link>
-            <a
-              href="https://drive.google.com/file/d/1DWKiqIGOWJmGJRcTKvqHl_9EgIwITSbu/view?usp=sharing"
-              target="_blank"
-              rel="noreferrer"
-              download
+            <button
+              onClick={handleDownload}
               className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
             >
               <Download className="h-4 w-4" /> Download résumé
-            </a>
+            </button>
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 rounded-md px-3 py-2.5 text-sm font-medium text-foreground hover:text-muted-foreground"

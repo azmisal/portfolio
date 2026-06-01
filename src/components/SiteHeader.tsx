@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { Download, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { resumeDownload } from "@/utils";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -10,8 +11,14 @@ const nav = [
 ] as const;
 
 
+
 export default function SiteHeader() {
   const [open, setOpen] = useState(false);
+
+  const handleResumeDownload = () => {11
+    resumeDownload();
+  }
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
@@ -40,14 +47,14 @@ export default function SiteHeader() {
         {/* Right Side */}
         <div className="flex items-center gap-2">
           {/* Desktop Resume Button */}
-          <a
-            href="/azmi-saleem-resume.pdf"
-            download
+          <button
+            onClick={handleResumeDownload}
+
             className="hidden items-center gap-2 rounded-md bg-black px-3.5 py-2 text-xs font-medium text-white transition-opacity hover:opacity-90 sm:inline-flex"
           >
             <Download className="h-3.5 w-3.5" />
             Resume
-          </a>
+          </button>
 
           {/* Mobile Menu Button */}
           <button
@@ -82,15 +89,13 @@ export default function SiteHeader() {
             ))}
 
             {/* Mobile Resume Button */}
-            <a
-              href="/azmi-saleem-resume.pdf"
-              download
-              onClick={() => setOpen(false)}
+            <button
+              onClick={handleResumeDownload}
               className="mt-2 inline-flex items-center justify-center gap-2 rounded-md bg-black px-3.5 py-2.5 text-xs font-medium text-white sm:hidden"
             >
               <Download className="h-3.5 w-3.5" />
               Download Resume
-            </a>
+            </button>
           </div>
         </nav>
       )}
