@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import SEO from "@/components/SEO";
 import { useState } from "react";
 import { PROJECTS } from "@/lib/profile";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -13,13 +13,11 @@ export default function ProjectsPage() {
 
   return (
     <section>
-      <Helmet>
-        <title>Projects — Azmi Saleem</title>
-        <meta name="description" content="Selected projects by Azmi Saleem: trading simulators, AI tools, encrypted vaults, blockchain IP and more." />
-        <meta property="og:title" content="Projects — Azmi Saleem" />
-        <meta property="og:description" content="A selection of full-stack and backend projects." />
-        <link rel="canonical" href="/projects" />
-      </Helmet>
+      <SEO
+        title="Projects — Azmi Saleem"
+        description="Selected projects by Azmi Saleem: trading simulators, AI tools, encrypted vaults, blockchain IP and more."
+        canonical="/projects"
+      />
       <div className="mx-auto max-w-6xl px-6 py-20">
         <SectionHeading
           eyebrow="Projects"
@@ -32,11 +30,10 @@ export default function ProjectsPage() {
             <button
               key={c}
               onClick={() => setActive(c)}
-              className={`rounded-full border px-4 py-1.5 text-xs font-medium transition-colors ${
-                active === c
+              className={`rounded-full border px-4 py-1.5 text-xs font-medium transition-colors ${active === c
                   ? "border-foreground bg-foreground text-background"
                   : "border-border bg-card text-muted-foreground hover:text-foreground"
-              }`}
+                }`}
             >
               {c}
             </button>
