@@ -1,17 +1,15 @@
-import { Helmet } from "react-helmet-async";
+import SEO from "@/components/SEO";
 import { SectionHeading } from "@/components/SectionHeading";
 import { EXPERIENCE, SKILL_GROUPS, EDUCATION, ACHIEVEMENTS } from "@/lib/profile";
 
 export default function AboutPage() {
   return (
     <>
-      <Helmet>
-        <title>About — Azmi Saleem</title>
-        <meta name="description" content="About Azmi Saleem: experience at TCS, MetaShot, and Mezmo Solutions, plus skills and education." />
-        <meta property="og:title" content="About — Azmi Saleem" />
-        <meta property="og:description" content="Backend-focused full-stack engineer with 2+ years building enterprise healthcare systems." />
-        <link rel="canonical" href="/about" />
-      </Helmet>
+      <SEO
+        title="About — Azmi Saleem"
+        description="About Azmi Saleem: experience at TCS, MetaShot, and Mezmo Solutions, plus skills and education."
+        canonical="/about"
+      />
       <section className="border-b border-border">
         <div className="mx-auto max-w-4xl px-6 py-20">
           <p className="mb-3 text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">

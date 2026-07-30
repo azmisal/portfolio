@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import SEO from "@/components/SEO";
 import { ArrowRight, Download, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { PROJECTS, SKILL_GROUPS, CONTACT } from "@/lib/profile";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -14,15 +14,23 @@ export default function HomePage() {
     resumeDownload();
   }
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Azmi Saleem",
+    url: "/",
+    jobTitle: "Backend-focused Full-Stack Engineer",
+    sameAs: [CONTACT.github, CONTACT.linkedin]
+  };
+
   return (
     <>
-      <Helmet>
-        <title>Azmi Saleem — Backend-focused Full-Stack Engineer</title>
-        <meta name="description" content="Backend-focused full-stack engineer building enterprise healthcare systems at TCS. Node.js, Java, React, Python." />
-        <meta property="og:title" content="Azmi Saleem — Backend-focused Full-Stack Engineer" />
-        <meta property="og:description" content="Backend-focused full-stack engineer. Enterprise healthcare at TCS for Johnson & Johnson and Stryker." />
-        <link rel="canonical" href="/" />
-      </Helmet>
+      <SEO
+        title="Azmi Saleem — Backend-focused Full-Stack Engineer"
+        description="Backend-focused full-stack engineer building enterprise healthcare systems at TCS. Node.js, Java, React, Python."
+        canonical="/"
+        jsonLd={jsonLd}
+      />
       {/* Hero */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">

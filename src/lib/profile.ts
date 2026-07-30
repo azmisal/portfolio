@@ -45,7 +45,7 @@ export const PROJECTS: Project[] = [
     blurb: "Zero-knowledge encrypted vault for files and passwords.",
     description:
       "Client-side encrypted storage where keys never leave the device. Server stores only ciphertext — even a full DB breach reveals nothing.",
-    stack: ["React", "Node.js", "WebCrypto", "MongoDB"],
+    stack: ["Next.js", "WebCrypto", "MongoDB"],
     category: "Full-Stack",
   },
   {

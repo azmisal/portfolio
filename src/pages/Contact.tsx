@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import SEO from "@/components/SEO";
 import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { CONTACT } from "@/lib/profile";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -14,13 +14,11 @@ export default function ContactPage() {
 
   return (
     <section>
-      <Helmet>
-        <title>Contact — Azmi Saleem</title>
-        <meta name="description" content="Get in touch with Azmi Saleem — email, phone, GitHub, and LinkedIn." />
-        <meta property="og:title" content="Contact — Azmi Saleem" />
-        <meta property="og:description" content="Open to full-time roles and selective contract work." />
-        <link rel="canonical" href="/contact" />
-      </Helmet>
+      <SEO
+        title="Contact — Azmi Saleem"
+        description="Get in touch with Azmi Saleem — email, phone, GitHub, and LinkedIn."
+        canonical="/contact"
+      />
       <div className="mx-auto max-w-3xl px-6 py-20">
         <SectionHeading
           eyebrow="Contact"
